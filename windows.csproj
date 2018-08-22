@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Mono</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7773BDD8-037E-46DB-B842-B0EE41E74873}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>InitiateMod</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Mono|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType></DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Mono</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>AfterBuild</type>
+          <command>cp bin/${ProjectConfigName}/${TargetName} ${ProjectConfigName}.dll</command>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Windows|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Windows</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>AfterBuild</type>
+          <command>cp bin/${ProjectConfigName}/${TargetName} ${ProjectConfigName}.dll</command>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>InitiateMod</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+	<Compile Include="InitiateMod.cs" />
+	<Compile Include="Items/Weapons/ASword.cs" />
+	<Compile Include="Items/Weapons/DiseasedHive.cs" />
+	<Compile Include="Projectiles/plaguebee.cs" />
+	<Compile Include="Items/Placeable/PlagueInfuser.cs" />
+	<Compile Include="Blocks/PlagueInfuser.cs" />	
+	<Compile Include="InitiatePlayer.cs" />	
+	<Compile Include="StatusEffects/razorskiss.cs" />	
+	<Compile Include="Items/Armor/DecayedBreastplate.cs" />
+	<Compile Include="Items/Armor/DecayedLeggings.cs" />
+	<Compile Include="Items/Armor/DecayedHelmet.cs" />	
+	<Compile Include="InitiateWorld.cs" />	
+	<Compile Include="Items/Placeable/PetrifiedWoodBlock.cs" />
+	<Compile Include="Blocks/PetrifiedWoodBlock.cs" />	
+	<Compile Include="NPCs/Bosses/Enchanter.cs" />
+	<Compile Include="Projectiles/razorblast.cs" />		
+	<Compile Include="Projectiles/razorblast2.cs" />
+	<Compile Include="Items/Misc/EnchanterBag.cs" />
+	<Compile Include="Items/Weapons/EnchantersLegacy.cs" />
+	<Compile Include="Items/Accesories/EnchantedMedalion.cs" />
+	<Compile Include="Projectiles/friendlyrazorblast.cs" />
+	<Compile Include="Items/Misc/EnchantedShard.cs" />
+	<Compile Include="Blocks/SwampGrass.cs" />
+	<Compile Include="Blocks/SwampTree.cs" />
+	<Compile Include="Blocks/SwampSapling.cs" />
+	<Compile Include="NPCs/Meganeura.cs" />
+	<Compile Include="NPCs/Bosses/Hellwurm/Worm.cs" />
+	<Compile Include="Items/Misc/FieryFood.cs" />
+	<Compile Include="Items/Weapons/HellfireLance.cs" />
+	<Compile Include="Items/Armor/PetrifiedWoodChestpiece.cs" />
+	<Compile Include="Items/Armor/PetrifiedWoodGreaves.cs" />
+	<Compile Include="Items/Armor/PetrifiedWoodHelmet.cs" />
+	<Compile Include="Items/Misc/HellwurmBag.cs" />
+	<Compile Include="Projectiles/HellfireLanceProjectile.cs" />
+	<Compile Include="Items/Misc/CosmicKey.cs" />
+	<Compile Include="NPCs/Bosses/UniversalChest.cs" />
+	<Compile Include="NPCs/Bosses/UniversalMimic.cs" />
+	<Compile Include="NPCs/Bosses/UniversalMimic2.cs" />
+	<Compile Include="Items/Misc/UniversalMimicBag.cs" />
+	<Compile Include="Items/Misc/CelestiteBar.cs" />
+	<Compile Include="Items/Weapons/BlackHole.cs" />
+	<Compile Include="Items/Accesories/CosmicCore.cs" />
+	<Compile Include="Projectiles/BlackHoleProjectile.cs" />
+	<Compile Include="Items/Accesories/CelestialWings.cs" />
+	<Compile Include="Items/Armor/CelestiteBodyarmour.cs" />
+	<Compile Include="Items/Armor/CelestiteLeggings.cs" />
+	<Compile Include="Items/Armor/CelestiteHelm.cs" />
+	<Compile Include="NPCs/Ragnarock.cs" />
+	<Compile Include="Items/Pets/MeganeuraPet.cs" />
+	<Compile Include="Projectiles/Pets/MeganeuraPetProjectile.cs" />
+	<Compile Include="StatusEffects/MeganeuraPet.cs" />
+	<Compile Include="NPCs/FrozenWurm/FrozenWormHead.cs" />
+	<Compile Include="NPCs/FrozenWurm/FrozenWormTail.cs" />
+	<Compile Include="NPCs/FrozenWurm/FrozenWormBody.cs" />
+	<Compile Include="NPCs/IceWurm/IceWormHead.cs" />
+	<Compile Include="NPCs/IceWurm/IceWormBody.cs" />
+	<Compile Include="NPCs/IceWurm/IceWormTail.cs" />
+	<Compile Include="Items/Misc/IceBone.cs" />
+	<Compile Include="Items/Misc/FrozenBlood.cs" />
+	<Compile Include="Items/Accesories/FrozenHeart.cs" />
+	<Compile Include="Items/Misc/SoulOfPlight.cs" />
+	<Compile Include="Items/Armor/CelestiteHelmet.cs" />
+	<Compile Include="Items/Armor/CelestiteMask.cs" />
+	<Compile Include="Items/Armor/CelestiteHornedMask.cs" />
+	<Compile Include="Items/Armor/CelestiteHood.cs" />
+	<Compile Include="Items/Weapons/PetrifiedWoodSword.cs" />
+	<Compile Include="Items/Weapons/PetrifiedRepeater.cs" />
+	<Compile Include="Items/Weapons/PetrifiedStaff.cs" />
+	<Compile Include="Items/Weapons/PetrifiedWand.cs" />
+	<Compile Include="Items/Weapons/PetrifiedDisk.cs" />
+	<Compile Include="Projectiles/PetrifiedWandProjectile.cs" />
+	<Compile Include="Projectiles/PetrifiedBee.cs" />
+	<Compile Include="Projectiles/PetrifiedDiskProjectile.cs" />
+	<Compile Include="NPCs/Town/Enchantress.cs" />
+	<Compile Include="Items/Weapons/CelestiteSabre.cs" />
+	<Compile Include="Items/Weapons/CelestiteStaff.cs" />
+	<Compile Include="Items/Weapons/CelestiteRepeater.cs" />
+	<Compile Include="Items/Weapons/CelestiteFlakCannon.cs" />
+	<Compile Include="Items/Weapons/CelestialScythe.cs" />
+	<Compile Include="Projectiles/CelestiteStaffProjectile.cs" />
+	<Compile Include="Projectiles/CelestiteScytheProjectile.cs" />
+	<Compile Include="Projectiles/CelestiteFlak.cs" />
+	<Compile Include="Projectiles/CelestiteSabreProjectile.cs" />
+	<Compile Include="Items/Misc/BoneLock.cs" />
+	<Compile Include="Projectiles/Minions/CelestiteSeekerStaffProjectile.cs" />
+	<Compile Include="StatusEffects/CelestiteSeeker.cs" />
+	<Compile Include="Items/Weapons/CelestiteSeekerStaff.cs" />
+	<Compile Include="Minion.cs" />
+	<Compile Include="Items/Tools/CelestitePickaxe.cs" />
+	<Compile Include="Items/Tools/CelestiteHamaxe.cs" />
+	<Compile Include="Projectiles/LightBlast.cs" />
+	<Compile Include="Projectiles/DarkBlast.cs" />
+	<Compile Include="Items/Misc/OblivionBag.cs" />
+	<Compile Include="Items/Misc/OblivionEssence.cs" />
+	<Compile Include="Items/Misc/DarkMatter.cs" />
+	<Compile Include="NPCs/Bosses/OblivionInitiate.cs" />
+	<Compile Include="Items/Misc/SealOfOblivion.cs" />
+	<Compile Include="Items/Accesories/OblivionWings.cs" />
+	<Compile Include="Projectiles/DarkMatterBladesProjectile.cs" />
+	<Compile Include="Projectiles/FriendlyDarkBlast.cs" />
+	<Compile Include="Projectiles/FriendlyLightBlast.cs" />
+	<Compile Include="Projectiles/DarkBee.cs" />
+	<Compile Include="Items/Weapons/DarkMatterBlades.cs" />
+	<Compile Include="Items/Weapons/DarkMatterSword.cs" />
+	<Compile Include="Items/Weapons/DarkMatterRepeater.cs" />
+	<Compile Include="Items/Weapons/DarkMatterWand.cs" />
+	<Compile Include="Items/Weapons/DarkMatterStaff.cs" />
+	<Compile Include="Items/Misc/DestroyerScale.cs" />
+	<Compile Include="Items/Misc/DOWBag.cs" />
+	<Compile Include="Blocks/DarkEnergyReactor.cs" />
+	<Compile Include="Items/Placeable/DarkEnergyReactor.cs" />
+	<Compile Include="NPCs/Bosses/DestroyerOfWorlds/DOW.cs" />
+	<Compile Include="Items/Misc/LuminiteWorm.cs" />
+	<Compile Include="Items/Accesories/RingOfPower.cs" />
+	<Compile Include="Items/Accesories/DiscordianRing.cs" />
+	<Compile Include="InitiateNPC.cs" />
+	<Compile Include="InitiateGlobalNPC.cs" />
+	<Compile Include="Items/Weapons/DarkEnergyBlades.cs" />
+	<Compile Include="Items/Weapons/DarkEnergySword.cs" />
+	<Compile Include="Items/Weapons/DarkEnergyRepeater.cs" />
+	<Compile Include="Items/Weapons/DarkEnergyWand.cs" />
+	<Compile Include="Items/Weapons/DarkEnergyStaff.cs" />
+	<Compile Include="Projectiles/DarkBee2.cs" />
+	<Compile Include="Projectiles/DarkEnergySwordProjectile.cs" />
+	<Compile Include="Projectiles/DarkEnergyBladesProjectile.cs" />
+	<Compile Include="Items/Misc/HellflameShadowspark.cs" />
+	<Compile Include="Items/Armor/HellshadeCowl.cs" />
+	<Compile Include="Items/Armor/HellshadeRobes.cs" />
+	<Compile Include="Items/Armor/DarkcoreScalemail.cs" />
+	<Compile Include="Items/Armor/DarkcoreLeggings.cs" />
+	<Compile Include="Items/Armor/DarkcoreHelmet.cs" />
+	<Compile Include="Items/Placeable/EnchanterTrophy.cs" />
+	<Compile Include="Blocks/EnchanterTrophy.cs" />
+	<Compile Include="Blocks/HellwurmTrophy.cs" />
+	<Compile Include="Blocks/DOWTrophy.cs" />
+	<Compile Include="Blocks/UniversalMimicTrophy.cs" />
+	<Compile Include="Blocks/OblivionInitiateTrophy.cs" />
+	<Compile Include="Items/Placeable/DestroyerOfWorldsTrophy.cs" />
+	<Compile Include="Items/Placeable/HellwurmTrophy.cs" />
+	<Compile Include="Items/Placeable/OblivionInitiateTrophy.cs" />
+	<Compile Include="Items/Placeable/UniversalMimicTrophy.cs" />
+	<Compile Include="Items/Weapons/ShadefireDiscus.cs" />
+	<Compile Include="Projectiles/ShadefireDiscusProjectile.cs" />
+	<Compile Include="Items/Misc/CelestialShifter.cs" />
+	<Compile Include="Items/Misc/ThirdSealOfOblivion.cs" />
+	<Compile Include="Items/Accesories/JeweledCross.cs" />
+	<Compile Include="NPCs/Bosses/FlameInitiate.cs" />
+	<Compile Include="Items/Placeable/FlameInitiateTrophy.cs" />
+	<Compile Include="Blocks/FlameInitiateTrophy.cs" />
+	<Compile Include="Items/Misc/SealOfFlame.cs" />
+	<Compile Include="Items/Misc/FlameEssence.cs" />
+	<Compile Include="Items/Misc/FlameBag.cs" />
+	<Compile Include="Items/Accesories/MagmaImbue.cs" />
+
+
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="build.txt" />
+    <Content Include="description.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="tModLoaderWindows">
+      <HintPath>..\..\..\..\..\..\.steam\steam\steamapps\common\Terraria\ModCompile\tModLoaderWindows.exe</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework">
+      <HintPath>..\..\..\..\..\..\.steam\steam\steamapps\common\Terraria\ModCompile\Microsoft.Xna.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics">
+      <HintPath>..\..\..\..\..\..\.steam\steam\steamapps\common\Terraria\ModCompile\Microsoft.Xna.Framework.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game">
+      <HintPath>..\..\..\..\..\..\.steam\steam\steamapps\common\Terraria\ModCompile\Microsoft.Xna.Framework.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact">
+      <HintPath>..\..\..\..\..\..\.steam\steam\steamapps\common\Terraria\ModCompile\Microsoft.Xna.Framework.Xact.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

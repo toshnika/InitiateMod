@@ -1,0 +1,4 @@
+author = toshnika
+version = 1.0.0
+displayName = Initiate Mod
+noCompile = true
